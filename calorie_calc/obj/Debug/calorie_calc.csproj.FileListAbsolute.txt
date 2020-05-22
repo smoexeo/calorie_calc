@@ -1,0 +1,13 @@
+C:\Users\subbotinaarina\source\repos\calorie_calc\calorie_calc\bin\Debug\calorie_calc.exe.config
+C:\Users\subbotinaarina\source\repos\calorie_calc\calorie_calc\bin\Debug\calorie_calc.exe
+C:\Users\subbotinaarina\source\repos\calorie_calc\calorie_calc\bin\Debug\calorie_calc.pdb
+C:\Users\subbotinaarina\source\repos\calorie_calc\calorie_calc\obj\Debug\calorie_calc.csprojAssemblyReference.cache
+C:\Users\subbotinaarina\source\repos\calorie_calc\calorie_calc\obj\Debug\calorie_calc.Main_Form.resources
+C:\Users\subbotinaarina\source\repos\calorie_calc\calorie_calc\obj\Debug\calorie_calc.Properties.Resources.resources
+C:\Users\subbotinaarina\source\repos\calorie_calc\calorie_calc\obj\Debug\calorie_calc.csproj.GenerateResource.cache
+C:\Users\subbotinaarina\source\repos\calorie_calc\calorie_calc\obj\Debug\calorie_calc.csproj.CoreCompileInputs.cache
+C:\Users\subbotinaarina\source\repos\calorie_calc\calorie_calc\obj\Debug\calorie_calc.exe
+C:\Users\subbotinaarina\source\repos\calorie_calc\calorie_calc\obj\Debug\calorie_calc.pdb
+C:\Users\subbotinaarina\source\repos\calorie_calc\calorie_calc\obj\Debug\calorie_calc.Authentication.resources
+C:\Users\subbotinaarina\source\repos\calorie_calc\calorie_calc\obj\Debug\calorie_calc.Profile.resources
+C:\Users\subbotinaarina\source\repos\calorie_calc\calorie_calc\obj\Debug\calorie_calc.Registration.resources
