@@ -30,14 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.login = new System.Windows.Forms.TextBox();
+            this.password = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.password1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.gender_male = new System.Windows.Forms.RadioButton();
+            this.gender_female = new System.Windows.Forms.RadioButton();
             this.registrate = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -60,21 +60,21 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Логин";
             // 
-            // textBox1
+            // login
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(45, 123);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(387, 49);
-            this.textBox1.TabIndex = 2;
+            this.login.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.login.Location = new System.Drawing.Point(45, 123);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(387, 49);
+            this.login.TabIndex = 2;
             // 
-            // textBox2
+            // password
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(45, 236);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(387, 49);
-            this.textBox2.TabIndex = 4;
+            this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.password.Location = new System.Drawing.Point(45, 236);
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(387, 49);
+            this.password.TabIndex = 4;
             // 
             // label3
             // 
@@ -85,13 +85,13 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Пароль";
             // 
-            // textBox3
+            // password1
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(45, 346);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(387, 49);
-            this.textBox3.TabIndex = 6;
+            this.password1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.password1.Location = new System.Drawing.Point(45, 346);
+            this.password1.Name = "password1";
+            this.password1.Size = new System.Drawing.Size(387, 49);
+            this.password1.TabIndex = 6;
             // 
             // label4
             // 
@@ -111,27 +111,27 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Пол";
             // 
-            // radioButton1
+            // gender_male
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(45, 462);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(133, 29);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Мужской";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.gender_male.AutoSize = true;
+            this.gender_male.Location = new System.Drawing.Point(45, 462);
+            this.gender_male.Name = "gender_male";
+            this.gender_male.Size = new System.Drawing.Size(133, 29);
+            this.gender_male.TabIndex = 8;
+            this.gender_male.TabStop = true;
+            this.gender_male.Text = "Мужской";
+            this.gender_male.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // gender_female
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(300, 462);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(132, 29);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Женский";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.gender_female.AutoSize = true;
+            this.gender_female.Location = new System.Drawing.Point(300, 462);
+            this.gender_female.Name = "gender_female";
+            this.gender_female.Size = new System.Drawing.Size(132, 29);
+            this.gender_female.TabIndex = 9;
+            this.gender_female.TabStop = true;
+            this.gender_female.Text = "Женский";
+            this.gender_female.UseVisualStyleBackColor = true;
             // 
             // registrate
             // 
@@ -160,19 +160,18 @@
             this.ClientSize = new System.Drawing.Size(493, 594);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.registrate);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.gender_female);
+            this.Controls.Add(this.gender_male);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.password1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.password);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.login);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Registration";
             this.Text = "Registration";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Registration_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,14 +181,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox login;
+        private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox password1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton gender_male;
+        private System.Windows.Forms.RadioButton gender_female;
         private System.Windows.Forms.Button registrate;
         private System.Windows.Forms.Button cancel;
     }

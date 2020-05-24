@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Security.Cryptography;
 
 namespace calorie_calc
 {
+
     public partial class Authentication : Form
     {
+        public string connectString = "Data Source=calorie-calc.database.windows.net;Initial Catalog=user1;User ID=calorie-calc;Password=ruwgib-xiHpok-carto0;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public Authentication()
         {
             InitializeComponent();
@@ -19,14 +24,35 @@ namespace calorie_calc
 
         private void Enter_Click(object sender, EventArgs e)
         {
-            //работа с бд
-            if (true)
+            using (SqlConnection sConn = new SqlConnection(connectString))
             {
+                // Открываем подключение
+                sConn.Open();
+                // Создаем команду 
+                string sqlExpression = "SELECT * FROM [dbo].[user] WHERE login = '" + login.Text + "'";
+                SqlCommand sCommand = new SqlCommand(sqlExpression, sConn);
 
-            }
-            else
-            {
-
+                // Инициализируем ридер
+                SqlDataReader reader = sCommand.ExecuteReader();
+                // Если можно сдвинуться на строчку ниже то польхователь с таким логином найден
+                if (reader.Read())
+                {
+                    // Берем значения из полей
+                    string passwordHash = (string)reader["password"];
+                    string salt = (string)reader["salt"];
+                    //string name = (string)reader["name"];
+                    //((Main_Form)this.Tag).user_name = name;
+                    int user_id = (int)reader["id_user"];
+                    ((Main_Form)this.Tag).user_id = user_id;
+                    // Если хэш от строки (пароль из поля + соль) совпали с ранее хэшированным то пароль верный
+                    if (passwordHash == CalcHash(password.Text + salt))
+                    {
+                        MessageBox.Show("Вход выполнен");
+                        ActiveForm.Close();
+                    }
+                    else MessageBox.Show("Неверный пароль");
+                }
+                else MessageBox.Show("Пользователь с таким логином не найден");
             }
         }
 
@@ -38,18 +64,17 @@ namespace calorie_calc
 
         private void Cancel_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Хотите ли вы войти в систему?", "Предупреждение", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                Enter_Click(sender, e);
-            }
             ActiveForm.Close();
-            //вернуться в основную форму
         }
-
-        private void Authentication_FormClosing(object sender, FormClosingEventArgs e)
+        private string CalcHash(string text)
         {
-            Cancel_Click(sender, e);
-            //вернуться в основную форму
+            // Инициализируем экземляр класса вычисления хэша
+            // SHA1 имеет выпускные данные в 160 бит то есть 20 байт, и аналогично соли вернется строка из 40 символов
+            // пожтому в БД в графу пароль с хэшем ставим фиксированный тип char(40)
+            using (SHA1CryptoServiceProvider SHA1 = new SHA1CryptoServiceProvider())
+            {
+                return BitConverter.ToString(SHA1.ComputeHash(Encoding.UTF8.GetBytes(text))).Replace("-", "");
+            }
         }
     }
 }

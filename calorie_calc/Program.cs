@@ -16,7 +16,7 @@ namespace calorie_calc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_Form());
+            Application.Run(new Main_Form("",-1,"Войти"));
         }
     }
 }

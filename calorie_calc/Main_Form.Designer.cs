@@ -33,18 +33,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.product = new System.Windows.Forms.DataGridView();
             this.history_product = new System.Windows.Forms.DataGridView();
-            this.sport = new System.Windows.Forms.DataGridView();
             this.history_sport = new System.Windows.Forms.DataGridView();
+            this.sport = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.product_cal = new System.Windows.Forms.Label();
+            this.sport_cal = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.total = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.Save = new System.Windows.Forms.Button();
             this.Reset = new System.Windows.Forms.Button();
             this.add_product = new System.Windows.Forms.Button();
             this.delete_product = new System.Windows.Forms.Button();
@@ -53,8 +52,8 @@
             this.Profile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.history_product)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.history_sport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sport)).BeginInit();
             this.SuspendLayout();
             // 
             // Entry
@@ -88,7 +87,7 @@
             // product
             // 
             this.product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.product.Location = new System.Drawing.Point(17, 121);
+            this.product.Location = new System.Drawing.Point(16, 121);
             this.product.Name = "product";
             this.product.RowHeadersWidth = 82;
             this.product.RowTemplate.Height = 33;
@@ -97,42 +96,46 @@
             // 
             // history_product
             // 
+            this.history_product.AllowUserToAddRows = false;
+            this.history_product.AllowUserToDeleteRows = false;
             this.history_product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.history_product.Location = new System.Drawing.Point(383, 121);
+            this.history_product.Location = new System.Drawing.Point(382, 121);
             this.history_product.Name = "history_product";
             this.history_product.RowHeadersWidth = 82;
             this.history_product.RowTemplate.Height = 33;
             this.history_product.Size = new System.Drawing.Size(301, 530);
             this.history_product.TabIndex = 4;
             // 
-            // sport
-            // 
-            this.sport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sport.Location = new System.Drawing.Point(896, 121);
-            this.sport.Name = "sport";
-            this.sport.RowHeadersWidth = 82;
-            this.sport.RowTemplate.Height = 33;
-            this.sport.Size = new System.Drawing.Size(301, 530);
-            this.sport.TabIndex = 5;
-            // 
             // history_sport
             // 
+            this.history_sport.AllowUserToAddRows = false;
+            this.history_sport.AllowUserToDeleteRows = false;
             this.history_sport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.history_sport.Location = new System.Drawing.Point(1261, 121);
+            this.history_sport.Location = new System.Drawing.Point(896, 121);
             this.history_sport.Name = "history_sport";
             this.history_sport.RowHeadersWidth = 82;
             this.history_sport.RowTemplate.Height = 33;
             this.history_sport.Size = new System.Drawing.Size(301, 530);
-            this.history_sport.TabIndex = 6;
+            this.history_sport.TabIndex = 5;
+            // 
+            // sport
+            // 
+            this.sport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sport.Location = new System.Drawing.Point(1261, 121);
+            this.sport.Name = "sport";
+            this.sport.RowHeadersWidth = 82;
+            this.sport.RowTemplate.Height = 33;
+            this.sport.Size = new System.Drawing.Size(301, 530);
+            this.sport.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(953, 67);
+            this.label3.Location = new System.Drawing.Point(934, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(195, 25);
+            this.label3.Size = new System.Drawing.Size(242, 25);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Выбранное блюдо";
+            this.label3.Text = "Выбранная активность";
             // 
             // label4
             // 
@@ -143,23 +146,23 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Выберите активность";
             // 
-            // label5
+            // product_cal
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(741, 191);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 25);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "+N ккал";
+            this.product_cal.AutoSize = true;
+            this.product_cal.Location = new System.Drawing.Point(741, 191);
+            this.product_cal.Name = "product_cal";
+            this.product_cal.Size = new System.Drawing.Size(91, 25);
+            this.product_cal.TabIndex = 9;
+            this.product_cal.Text = "+N ккал";
             // 
-            // label6
+            // sport_cal
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(746, 241);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 25);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "-N ккал";
+            this.sport_cal.AutoSize = true;
+            this.sport_cal.Location = new System.Drawing.Point(746, 241);
+            this.sport_cal.Name = "sport_cal";
+            this.sport_cal.Size = new System.Drawing.Size(86, 25);
+            this.sport_cal.TabIndex = 10;
+            this.sport_cal.Text = "-N ккал";
             // 
             // label7
             // 
@@ -170,14 +173,14 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Итого:";
             // 
-            // label8
+            // total
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(739, 355);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(88, 25);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "+0 ккал";
+            this.total.AutoSize = true;
+            this.total.Location = new System.Drawing.Point(739, 355);
+            this.total.Name = "total";
+            this.total.Size = new System.Drawing.Size(88, 25);
+            this.total.TabIndex = 12;
+            this.total.Text = "+0 ккал";
             // 
             // label9
             // 
@@ -199,21 +202,11 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(690, 518);
+            this.dateTimePicker1.Location = new System.Drawing.Point(690, 569);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 31);
             this.dateTimePicker1.TabIndex = 15;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // Save
-            // 
-            this.Save.Location = new System.Drawing.Point(690, 555);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(200, 45);
-            this.Save.TabIndex = 16;
-            this.Save.Text = "Сохранить";
-            this.Save.UseVisualStyleBackColor = true;
-            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Reset
             // 
@@ -233,6 +226,7 @@
             this.add_product.TabIndex = 18;
             this.add_product.Text = ">";
             this.add_product.UseVisualStyleBackColor = true;
+            this.add_product.Click += new System.EventHandler(this.add_product_Click);
             // 
             // delete_product
             // 
@@ -242,6 +236,7 @@
             this.delete_product.TabIndex = 19;
             this.delete_product.Text = "<";
             this.delete_product.UseVisualStyleBackColor = true;
+            this.delete_product.Click += new System.EventHandler(this.delete_product_Click);
             // 
             // add_sport
             // 
@@ -251,6 +246,7 @@
             this.add_sport.TabIndex = 21;
             this.add_sport.Text = "<";
             this.add_sport.UseVisualStyleBackColor = true;
+            this.add_sport.Click += new System.EventHandler(this.add_sport_Click);
             // 
             // delete_sport
             // 
@@ -260,6 +256,7 @@
             this.delete_sport.TabIndex = 20;
             this.delete_sport.Text = ">";
             this.delete_sport.UseVisualStyleBackColor = true;
+            this.delete_sport.Click += new System.EventHandler(this.delete_sport_Click);
             // 
             // Profile
             // 
@@ -275,6 +272,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1574, 668);
@@ -284,30 +282,30 @@
             this.Controls.Add(this.delete_product);
             this.Controls.Add(this.add_product);
             this.Controls.Add(this.Reset);
-            this.Controls.Add(this.Save);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.total);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.sport_cal);
+            this.Controls.Add(this.product_cal);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.history_sport);
             this.Controls.Add(this.sport);
+            this.Controls.Add(this.history_sport);
             this.Controls.Add(this.history_product);
             this.Controls.Add(this.product);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Entry);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Main_Form";
             this.Text = "Калькулятор калорий";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_Form_FormClosing);
+            this.Load += new System.EventHandler(this.Main_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.product)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.history_product)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.history_sport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,18 +318,17 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView product;
         private System.Windows.Forms.DataGridView history_product;
-        private System.Windows.Forms.DataGridView sport;
         private System.Windows.Forms.DataGridView history_sport;
+        private System.Windows.Forms.DataGridView sport;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label product_cal;
+        private System.Windows.Forms.Label sport_cal;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label total;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Reset;
         private System.Windows.Forms.Button add_product;
         private System.Windows.Forms.Button delete_product;
