@@ -99,6 +99,7 @@
             this.Registration.TabIndex = 6;
             this.Registration.Text = "Регистрация";
             this.Registration.UseVisualStyleBackColor = true;
+            this.Registration.Click += new System.EventHandler(this.Registration_Click);
             // 
             // Cancel
             // 
@@ -108,6 +109,7 @@
             this.Cancel.TabIndex = 7;
             this.Cancel.Text = "Отмена";
             this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // Authentication
             // 
@@ -124,6 +126,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Authentication";
             this.Text = "Authentication";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Authentication_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

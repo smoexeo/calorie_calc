@@ -16,5 +16,9 @@ namespace calorie_calc
         {
             InitializeComponent();
         }
+        private void Profile_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+        }
     }
 }
