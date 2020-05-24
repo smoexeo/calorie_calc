@@ -141,6 +141,7 @@
             this.registrate.TabIndex = 10;
             this.registrate.Text = "Регистрация";
             this.registrate.UseVisualStyleBackColor = true;
+            this.registrate.Click += new System.EventHandler(this.registrate_Click);
             // 
             // cancel
             // 
@@ -150,6 +151,7 @@
             this.cancel.TabIndex = 11;
             this.cancel.Text = "Отмена";
             this.cancel.UseVisualStyleBackColor = true;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // Registration
             // 
@@ -170,6 +172,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Registration";
             this.Text = "Registration";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Registration_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

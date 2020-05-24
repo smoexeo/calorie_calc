@@ -303,6 +303,7 @@
             this.Controls.Add(this.Entry);
             this.Name = "Main_Form";
             this.Text = "Калькулятор калорий";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_Form_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.product)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.history_product)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sport)).EndInit();
