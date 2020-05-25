@@ -93,6 +93,7 @@
             this.product.RowTemplate.Height = 33;
             this.product.Size = new System.Drawing.Size(301, 530);
             this.product.TabIndex = 3;
+            this.product.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.product_RowsAdded);
             // 
             // history_product
             // 
@@ -127,6 +128,7 @@
             this.sport.RowTemplate.Height = 33;
             this.sport.Size = new System.Drawing.Size(301, 530);
             this.sport.TabIndex = 6;
+            this.sport.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.sport_RowsAdded);
             // 
             // label3
             // 
