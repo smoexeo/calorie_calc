@@ -121,6 +121,8 @@ namespace calorie_calc
             }
             if (user_id != -1)
             {
+                food_calorie = 0;
+                sport_calorie = 0;
                 add_product.Enabled = true;
                 delete_product.Enabled = true;
                 add_sport.Enabled = true;
@@ -144,14 +146,14 @@ namespace calorie_calc
                 history_sport.Columns[0].Visible = false;
                 history_sport.Columns[3].Visible = false;
             }
-            //for(int i = 0; i < history_product.Rows.Count; i++)
-            //{
-            //    food_calorie += Convert.ToInt32(history_product.Rows[i].Cells[2].Value) * Convert.ToInt32(history_product.Rows[i].Cells[3]) / 100;
-            //}
-            //for (int i = 0; i < history_sport.Rows.Count; i++)
-            //{
-            //    sport_calorie += Convert.ToInt32(history_sport.Rows[i].Cells[2].Value) * Convert.ToInt32(history_sport.Rows[i].Cells[3]) / 60;
-            //}
+            for (int i = 0; i < history_product.Rows.Count; i++)
+            {
+                food_calorie += Convert.ToInt32(history_product.Rows[i].Cells[2].Value) * Convert.ToInt32(history_product.Rows[i].Cells[3].Value) / 100;
+            }
+            for (int i = 0; i < history_sport.Rows.Count; i++)
+            {
+                sport_calorie += Convert.ToInt32(history_sport.Rows[i].Cells[2].Value) * Convert.ToInt32(history_sport.Rows[i].Cells[3].Value) / 60;
+            }
             product_cal.Text = food_calorie.ToString() + " ккал";
             sport_cal.Text = (-sport_calorie).ToString()+ " ккал";
             total.Text = (food_calorie-sport_calorie).ToString() + " ккал";
