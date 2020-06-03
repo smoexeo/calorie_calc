@@ -45,7 +45,7 @@
             this.Entry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Entry.ForeColor = System.Drawing.Color.Gray;
             this.Entry.Location = new System.Drawing.Point(98, 60);
-            this.Entry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Entry.Margin = new System.Windows.Forms.Padding(4);
             this.Entry.Name = "Entry";
             this.Entry.Size = new System.Drawing.Size(258, 67);
             this.Entry.TabIndex = 0;
@@ -60,7 +60,7 @@
             this.product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.product.GridColor = System.Drawing.Color.White;
             this.product.Location = new System.Drawing.Point(62, 169);
-            this.product.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.product.Margin = new System.Windows.Forms.Padding(4);
             this.product.Name = "product";
             this.product.RowHeadersWidth = 82;
             this.product.RowTemplate.Height = 33;
@@ -75,7 +75,7 @@
             this.Profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Profile.ForeColor = System.Drawing.Color.DimGray;
             this.Profile.Location = new System.Drawing.Point(98, 21);
-            this.Profile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Profile.Margin = new System.Windows.Forms.Padding(4);
             this.Profile.Name = "Profile";
             this.Profile.Size = new System.Drawing.Size(258, 67);
             this.Profile.TabIndex = 22;
@@ -91,7 +91,7 @@
             this.add_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_product.ForeColor = System.Drawing.Color.DimGray;
             this.add_product.Location = new System.Drawing.Point(88, 673);
-            this.add_product.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.add_product.Margin = new System.Windows.Forms.Padding(4);
             this.add_product.Name = "add_product";
             this.add_product.Size = new System.Drawing.Size(268, 63);
             this.add_product.TabIndex = 18;
@@ -106,7 +106,7 @@
             this.delete_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_product.ForeColor = System.Drawing.Color.DimGray;
             this.delete_product.Location = new System.Drawing.Point(442, 673);
-            this.delete_product.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delete_product.Margin = new System.Windows.Forms.Padding(4);
             this.delete_product.Name = "delete_product";
             this.delete_product.Size = new System.Drawing.Size(268, 63);
             this.delete_product.TabIndex = 19;
@@ -132,7 +132,7 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(446, 73);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(6);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateTimePicker1.Size = new System.Drawing.Size(256, 37);
@@ -156,7 +156,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.HelpButton = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main_Form";
             this.Text = "Калькулятор калорий";
             this.Load += new System.EventHandler(this.Main_Form_Load);
