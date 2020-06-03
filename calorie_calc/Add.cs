@@ -17,7 +17,7 @@ namespace calorie_calc
             InitializeComponent();
             this.Name = act;
             this.button.Text = act;
-            this.item.Text = item;
+            //this.item.Text = item;
         }
 
         private void button_Click(object sender, EventArgs e)

@@ -44,10 +44,10 @@
             // 
             this.login.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.login.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.login.Location = new System.Drawing.Point(136, 43);
-            this.login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.login.Location = new System.Drawing.Point(272, 83);
+            this.login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.login.Name = "login";
-            this.login.Size = new System.Drawing.Size(126, 14);
+            this.login.Size = new System.Drawing.Size(252, 28);
             this.login.TabIndex = 2;
             this.login.Text = "Логин...";
             this.login.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -56,10 +56,10 @@
             // 
             this.password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.password.Location = new System.Drawing.Point(136, 97);
-            this.password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.password.Location = new System.Drawing.Point(272, 187);
+            this.password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(126, 14);
+            this.password.Size = new System.Drawing.Size(252, 28);
             this.password.TabIndex = 4;
             this.password.Text = "Пароль...";
             this.password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -68,10 +68,10 @@
             // 
             this.password1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.password1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.password1.Location = new System.Drawing.Point(136, 149);
-            this.password1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.password1.Location = new System.Drawing.Point(272, 287);
+            this.password1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.password1.Name = "password1";
-            this.password1.Size = new System.Drawing.Size(126, 14);
+            this.password1.Size = new System.Drawing.Size(252, 28);
             this.password1.TabIndex = 6;
             this.password1.Text = "Повторите пароль...";
             this.password1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -83,10 +83,10 @@
             this.registrate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registrate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.registrate.ForeColor = System.Drawing.Color.DimGray;
-            this.registrate.Location = new System.Drawing.Point(46, 192);
-            this.registrate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.registrate.Location = new System.Drawing.Point(92, 369);
+            this.registrate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.registrate.Name = "registrate";
-            this.registrate.Size = new System.Drawing.Size(132, 32);
+            this.registrate.Size = new System.Drawing.Size(264, 62);
             this.registrate.TabIndex = 10;
             this.registrate.Text = "РЕГИСТРАЦИЯ";
             this.registrate.UseVisualStyleBackColor = false;
@@ -99,10 +99,10 @@
             this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cancel.ForeColor = System.Drawing.Color.DimGray;
-            this.cancel.Location = new System.Drawing.Point(222, 192);
-            this.cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cancel.Location = new System.Drawing.Point(444, 369);
+            this.cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(132, 32);
+            this.cancel.Size = new System.Drawing.Size(264, 62);
             this.cancel.TabIndex = 11;
             this.cancel.Text = "ОТМЕНА";
             this.cancel.UseVisualStyleBackColor = false;
@@ -114,10 +114,10 @@
             this.gender_female.BackColor = System.Drawing.Color.White;
             this.gender_female.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gender_female.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.gender_female.Location = new System.Drawing.Point(11, 18);
-            this.gender_female.Margin = new System.Windows.Forms.Padding(2);
+            this.gender_female.Location = new System.Drawing.Point(22, 35);
+            this.gender_female.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gender_female.Name = "gender_female";
-            this.gender_female.Size = new System.Drawing.Size(78, 18);
+            this.gender_female.Size = new System.Drawing.Size(149, 30);
             this.gender_female.TabIndex = 14;
             this.gender_female.TabStop = true;
             this.gender_female.Text = "Женский";
@@ -129,10 +129,10 @@
             this.gender_male.BackColor = System.Drawing.Color.White;
             this.gender_male.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gender_male.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.gender_male.Location = new System.Drawing.Point(11, 40);
-            this.gender_male.Margin = new System.Windows.Forms.Padding(2);
+            this.gender_male.Location = new System.Drawing.Point(22, 77);
+            this.gender_male.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gender_male.Name = "gender_male";
-            this.gender_male.Size = new System.Drawing.Size(77, 18);
+            this.gender_male.Size = new System.Drawing.Size(150, 30);
             this.gender_male.TabIndex = 13;
             this.gender_male.TabStop = true;
             this.gender_male.Text = "Мужской";
@@ -144,27 +144,29 @@
             this.groupBox1.Controls.Add(this.gender_male);
             this.groupBox1.Controls.Add(this.gender_female);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Location = new System.Drawing.Point(302, 3);
+            this.groupBox1.Location = new System.Drawing.Point(604, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(95, 69);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Size = new System.Drawing.Size(190, 133);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Пол";
             // 
             // Registration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(398, 242);
+            this.ClientSize = new System.Drawing.Size(796, 465);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.registrate);
             this.Controls.Add(this.password1);
             this.Controls.Add(this.password);
             this.Controls.Add(this.login);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Registration";
             this.Text = "Регистрация";
             this.groupBox1.ResumeLayout(false);

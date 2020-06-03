@@ -44,10 +44,10 @@
             this.Entry.FlatAppearance.BorderSize = 0;
             this.Entry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Entry.ForeColor = System.Drawing.Color.Gray;
-            this.Entry.Location = new System.Drawing.Point(49, 31);
-            this.Entry.Margin = new System.Windows.Forms.Padding(2);
+            this.Entry.Location = new System.Drawing.Point(98, 60);
+            this.Entry.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Entry.Name = "Entry";
-            this.Entry.Size = new System.Drawing.Size(129, 35);
+            this.Entry.Size = new System.Drawing.Size(258, 67);
             this.Entry.TabIndex = 0;
             this.Entry.Text = "ВОЙТИ";
             this.Entry.UseVisualStyleBackColor = true;
@@ -59,12 +59,12 @@
             this.product.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.product.GridColor = System.Drawing.Color.White;
-            this.product.Location = new System.Drawing.Point(31, 88);
-            this.product.Margin = new System.Windows.Forms.Padding(2);
+            this.product.Location = new System.Drawing.Point(62, 169);
+            this.product.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.product.Name = "product";
             this.product.RowHeadersWidth = 82;
             this.product.RowTemplate.Height = 33;
-            this.product.Size = new System.Drawing.Size(336, 223);
+            this.product.Size = new System.Drawing.Size(672, 429);
             this.product.TabIndex = 3;
             this.product.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.product_RowsAdded);
             // 
@@ -74,10 +74,10 @@
             this.Profile.FlatAppearance.BorderSize = 0;
             this.Profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Profile.ForeColor = System.Drawing.Color.DimGray;
-            this.Profile.Location = new System.Drawing.Point(49, 11);
-            this.Profile.Margin = new System.Windows.Forms.Padding(2);
+            this.Profile.Location = new System.Drawing.Point(98, 21);
+            this.Profile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Profile.Name = "Profile";
-            this.Profile.Size = new System.Drawing.Size(129, 35);
+            this.Profile.Size = new System.Drawing.Size(258, 67);
             this.Profile.TabIndex = 22;
             this.Profile.Text = "ПРОФИЛЬ";
             this.Profile.UseVisualStyleBackColor = false;
@@ -90,10 +90,10 @@
             this.add_product.FlatAppearance.BorderSize = 0;
             this.add_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.add_product.ForeColor = System.Drawing.Color.DimGray;
-            this.add_product.Location = new System.Drawing.Point(44, 350);
-            this.add_product.Margin = new System.Windows.Forms.Padding(2);
+            this.add_product.Location = new System.Drawing.Point(88, 673);
+            this.add_product.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.add_product.Name = "add_product";
-            this.add_product.Size = new System.Drawing.Size(134, 33);
+            this.add_product.Size = new System.Drawing.Size(268, 63);
             this.add_product.TabIndex = 18;
             this.add_product.Text = "ДОБАВИТЬ";
             this.add_product.UseVisualStyleBackColor = false;
@@ -105,10 +105,10 @@
             this.delete_product.FlatAppearance.BorderSize = 0;
             this.delete_product.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete_product.ForeColor = System.Drawing.Color.DimGray;
-            this.delete_product.Location = new System.Drawing.Point(221, 350);
-            this.delete_product.Margin = new System.Windows.Forms.Padding(2);
+            this.delete_product.Location = new System.Drawing.Point(442, 673);
+            this.delete_product.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.delete_product.Name = "delete_product";
-            this.delete_product.Size = new System.Drawing.Size(134, 33);
+            this.delete_product.Size = new System.Drawing.Size(268, 63);
             this.delete_product.TabIndex = 19;
             this.delete_product.Text = "УДАЛИТЬ";
             this.delete_product.UseVisualStyleBackColor = false;
@@ -117,9 +117,10 @@
             // result
             // 
             this.result.AutoSize = true;
-            this.result.Location = new System.Drawing.Point(35, 313);
+            this.result.Location = new System.Drawing.Point(70, 602);
+            this.result.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(62, 13);
+            this.result.Size = new System.Drawing.Size(121, 25);
             this.result.TabIndex = 23;
             this.result.Text = "Результат:";
             // 
@@ -130,20 +131,21 @@
             this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.Gray;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(223, 38);
+            this.dateTimePicker1.Location = new System.Drawing.Point(446, 73);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker1.Size = new System.Drawing.Size(130, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(256, 37);
             this.dateTimePicker1.TabIndex = 24;
             // 
             // Main_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(400, 400);
+            this.ClientSize = new System.Drawing.Size(800, 769);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.result);
             this.Controls.Add(this.Profile);
@@ -154,7 +156,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.HelpButton = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Main_Form";
             this.Text = "Калькулятор калорий";
             this.Load += new System.EventHandler(this.Main_Form_Load);
