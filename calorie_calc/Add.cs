@@ -25,5 +25,10 @@ namespace calorie_calc
             ((Main_Form)this.Tag).weight = Convert.ToInt32(count.Text);
             ActiveForm.Close();
         }
+
+        private void count_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
