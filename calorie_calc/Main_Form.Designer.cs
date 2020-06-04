@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.Entry = new System.Windows.Forms.Button();
             this.product = new System.Windows.Forms.DataGridView();
@@ -36,6 +39,10 @@
             this.delete = new System.Windows.Forms.Button();
             this.result = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.product_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kalories = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,16 +62,52 @@
             // 
             // product
             // 
-            this.product.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.product.AllowUserToAddRows = false;
+            this.product.AllowUserToDeleteRows = false;
+            this.product.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.product.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.product.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.product.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.product.BackgroundColor = System.Drawing.Color.White;
             this.product.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.product.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.product.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.product.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.product_id,
+            this.Product_name,
+            this.Number,
+            this.Kalories});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.product.DefaultCellStyle = dataGridViewCellStyle3;
             this.product.GridColor = System.Drawing.Color.White;
-            this.product.Location = new System.Drawing.Point(31, 88);
+            this.product.Location = new System.Drawing.Point(28, 88);
             this.product.Margin = new System.Windows.Forms.Padding(2);
             this.product.Name = "product";
+            this.product.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.product.RowHeadersVisible = false;
             this.product.RowHeadersWidth = 82;
+            this.product.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.product.RowTemplate.Height = 33;
-            this.product.Size = new System.Drawing.Size(336, 223);
+            this.product.Size = new System.Drawing.Size(344, 223);
             this.product.TabIndex = 3;
             this.product.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.product_RowsAdded);
             // 
@@ -136,6 +179,28 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(130, 22);
             this.dateTimePicker1.TabIndex = 24;
             // 
+            // product_id
+            // 
+            this.product_id.HeaderText = "Идентификатор";
+            this.product_id.Name = "product_id";
+            this.product_id.ReadOnly = true;
+            this.product_id.Visible = false;
+            // 
+            // Product_name
+            // 
+            this.Product_name.HeaderText = "Название";
+            this.Product_name.Name = "Product_name";
+            // 
+            // Number
+            // 
+            this.Number.HeaderText = "Количество";
+            this.Number.Name = "Number";
+            // 
+            // Kalories
+            // 
+            this.Kalories.HeaderText = "Итого калорий";
+            this.Kalories.Name = "Kalories";
+            // 
             // Main_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +238,10 @@
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Label result;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn product_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Product_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Kalories;
     }
 }
 
