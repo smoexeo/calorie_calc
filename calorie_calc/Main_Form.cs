@@ -1,15 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using System.Data.SqlClient;
-using System.Configuration;
+using System.Windows.Forms;
 
 
 namespace calorie_calc
@@ -17,74 +8,49 @@ namespace calorie_calc
     public partial class Main_Form : Form
     {
         public string connectString = "Data Source=calorie-calc.database.windows.net;Initial Catalog=user1;User ID=calorie-calc;Password=ruwgib-xiHpok-carto0;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-        public int user_id=-1;
-        public string user_name;
-        int food_calorie = 0;
-        int sport_calorie = 0;
+        public int user_id = -1;
+        private string user_name;
+        private readonly int food_calorie = 0;
+        private readonly int sport_calorie = 0;
         public int weight;
-        bool new_rows_pr = false,new_rows_sp = false;
+        private readonly bool new_rows_pr = false, new_rows_sp = false;
         public Main_Form(string name, int id, string button_name)
         {
             InitializeComponent();
-            //Profile.Visible = false;
-            //this.user_name = name;
-            //this.user_id = id;
-            //Entry.Text = button_name;
-            //total.Text = (food_calorie - sport_calorie).ToString()+" ккал";
-            //product_cal.Text = food_calorie.ToString() + " ккал";
-            //sport_cal.Text = (-sport_calorie).ToString() + " ккал";
-            //add_product.Enabled = false;
-            //delete_product.Enabled = false;
-            //add_sport.Enabled = false;
-            //delete_sport.Enabled = false;
         }
 
         private void Entry_Click(object sender, EventArgs e)
         {
-            if (Entry.Text == "ВОЙТИ")
+            Authentication form = new Authentication
             {
-                Authentication form = new Authentication();
-                form.Tag = this;
-                form.ShowDialog();
-                Main_Form_Load(sender, e);
-            }
-            //else
-            //{
-            //    Profile.Visible = false;
-            //    Entry.Text = "Войти";
-            //    user_id = -1;
-            //    user_name = "";
-            //    Reset_Click(sender, e);
-            //}
+                Tag = this
+            };
+            Hide();
+            form.ShowDialog();
+            Show();
+            Main_Form_Load(sender, e);
         }
 
         private void Profile_Click(object sender, EventArgs e)
         {
+            Hide();
             Profile form = new Profile();
             form.ShowDialog();
-        }
+            Show();
 
-        private void Reset_Click(object sender, EventArgs e)
-        {
-            if(MessageBox.Show("Хотите ли вы удалить все записи за день?", "Предупреждение",MessageBoxButtons.YesNo, MessageBoxIcon.Warning)==DialogResult.Yes){
-                using (SqlConnection sConn = new SqlConnection(connectString))
-                {
-                    sConn.Open();
-                    string sqlExpression = "DELETE history_product WHERE id_user = " + user_id.ToString() + " and date = '" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'";
-                    SqlCommand sCommand = new SqlCommand(sqlExpression, sConn);
-                    if (sCommand.ExecuteNonQuery() != 1)
-                    {
-                        MessageBox.Show("Нечего удалять");
-                    }
-                    sqlExpression = "DELETE history_sport WHERE id_user = " + user_id.ToString() + " and date = '" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "'";
-                    sCommand = new SqlCommand(sqlExpression, sConn);
-                    if (sCommand.ExecuteNonQuery() != 1)
-                    {
-                        MessageBox.Show("Нечего удалять");
-                    }
-                    Main_Form_Load(sender, e);
-                    sConn.Close();
-                }
+            if (user_id == -1)
+            {
+                Entry.Enabled = true;
+                Profile.Enabled = false;
+                Entry.Show();
+                Profile.Hide();
+            }
+            else
+            {
+                Entry.Enabled = false;
+                Profile.Enabled = true;
+                Entry.Hide();
+                Profile.Show();
             }
         }
 
@@ -95,6 +61,23 @@ namespace calorie_calc
 
         private void Main_Form_Load(object sender, EventArgs e)
         {
+
+            if (user_id == -1)
+            {
+                Entry.Enabled = true;
+                Profile.Enabled = false;
+                Entry.Show();
+                Profile.Hide();
+                add.Enabled = false;
+            }
+            else
+            {
+                Entry.Enabled = false;
+                Profile.Enabled = true;
+                Entry.Hide();
+                Profile.Show();
+                add.Enabled = true;
+            }
             //dateTimePicker1.Format = DateTimePickerFormat.Short;
             //string query;
             //SqlDataAdapter dadapter;
@@ -164,13 +147,15 @@ namespace calorie_calc
         {
             if (product.SelectedRows.Count != 0)
             {
-                Add form = new Add(product.SelectedRows[0].Cells[1].Value.ToString(),"Добавить");
-                form.Tag = this;
+                Add form = new Add(product.SelectedRows[0].Cells[1].Value.ToString(), "Добавить")
+                {
+                    Tag = this
+                };
                 form.ShowDialog();
                 using (SqlConnection sConn = new SqlConnection(connectString))
                 {
                     sConn.Open();
-                    string sqlExpression = "INSERT INTO [dbo].[history_product] (id_user,date,id_product,weight) VALUES (" + user_id+ ",'" + dateTimePicker1.Value.Date.ToString("yyyyMMdd")+"','"+ product.SelectedRows[0].Cells[0].Value + "'," + weight+ ")";
+                    string sqlExpression = "INSERT INTO [dbo].[history_product] (id_user,date,id_product,weight) VALUES (" + user_id + ",'" + dateTimePicker1.Value.Date.ToString("yyyyMMdd") + "','" + product.SelectedRows[0].Cells[0].Value + "'," + weight + ")";
                     SqlCommand sCommand = new SqlCommand(sqlExpression, sConn);
                     if (sCommand.ExecuteNonQuery() == 1)
                     {
