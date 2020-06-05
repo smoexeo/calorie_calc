@@ -77,7 +77,7 @@ namespace calorie_calc
                         SqlDataReader reader = sCommand.ExecuteReader();
                         while (reader.Read())
                         {
-                            product.Rows.Add(reader["id_product"], reader["name"], reader["weight"], double.Parse(reader["calories"] + "") * double.Parse(reader["weight"] + "")) / 100;
+                            product.Rows.Add(reader["id_product"], reader["name"], reader["weight"], Convert.ToInt32(reader["calories"] + "") * Convert.ToInt32(reader["weight"] + "")/100);
                         }
                         reader.Close();
                     }
@@ -92,7 +92,7 @@ namespace calorie_calc
                         SqlDataReader reader = sCommand.ExecuteReader();
                         while (reader.Read())
                         {
-                            product.Rows.Add(reader["id_sport"], reader["name"], "-" + reader["calories"], "-" + (double.Parse(reader["calories"]) * double.Parse(reader["time"]))/60);
+                            product.Rows.Add(reader["id_sport"], reader["name"], "-" + reader["calories"], "-" + (Convert.ToInt32(reader["calories"]) * Convert.ToInt32(reader["time"]))/60);
                         }
                         reader.Close();
                     }
