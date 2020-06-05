@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,7 +31,7 @@ namespace calorie_calc
             product.Columns.Add("id", "");
             product.Columns.Add("name", "название");
             product.Columns.Add("calories", "каллории");
-            product.Columns.Add("count", "вес");
+            product.Columns.Add("count", "количество (гр. или мин.)");
             product.Columns.Add("type", "");
             
             using (var conn = new SqlConnection(connectString))
@@ -142,6 +143,7 @@ namespace calorie_calc
                     }
                 }
                 conn.Close();
+                Close();
             }
         }
 
@@ -175,9 +177,9 @@ namespace calorie_calc
 
         }
 
-        private void count_TextChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }

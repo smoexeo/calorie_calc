@@ -44,7 +44,7 @@
             this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button.ForeColor = System.Drawing.Color.DimGray;
             this.button.Location = new System.Drawing.Point(45, 351);
-            this.button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button.Margin = new System.Windows.Forms.Padding(2);
             this.button.Name = "button";
             this.button.Size = new System.Drawing.Size(135, 34);
             this.button.TabIndex = 2;
@@ -66,7 +66,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "ОТМЕНА";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // count
             // 
@@ -79,17 +79,20 @@
             this.count.TabIndex = 1;
             this.count.Text = "Поиск...";
             this.count.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.count.TextChanged += new System.EventHandler(this.count_TextChanged);
             // 
             // product
             // 
             this.product.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.product.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.product.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.product.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.product.GridColor = System.Drawing.Color.White;
             this.product.Location = new System.Drawing.Point(30, 88);
             this.product.Margin = new System.Windows.Forms.Padding(2);
             this.product.Name = "product";
+            this.product.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.product.RowHeadersVisible = false;
             this.product.RowHeadersWidth = 82;
             this.product.RowTemplate.Height = 33;
             this.product.Size = new System.Drawing.Size(336, 238);
@@ -107,7 +110,7 @@
             this.Controls.Add(this.button);
             this.Controls.Add(this.count);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Add";
             this.Text = "Добавить";
             ((System.ComponentModel.ISupportInitialize)(this.product)).EndInit();

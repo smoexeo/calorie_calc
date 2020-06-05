@@ -79,7 +79,7 @@ namespace calorie_calc
                         {
                             product.Rows.Add(reader["id_product"], reader["name"], reader["calories"], (double)reader["calories"] * (double)reader["weight"]);
                         }
-
+                        reader.Close();
                     }
 
                     using (SqlCommand sCommand = new SqlCommand
@@ -94,7 +94,7 @@ namespace calorie_calc
                         {
                             product.Rows.Add(reader["id_sport"], reader["name"], "-" + reader["calories"], "-" + ((double)reader["calories"] * (double)reader["time"]));
                         }
-
+                        reader.Close();
                     }
 
                     sConn.Close();
