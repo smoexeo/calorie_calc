@@ -12,7 +12,7 @@ namespace calorie_calc
 {
     public partial class Profile : Form
     {
-        public Profile()
+        public Profile(int user_id)
         {
             InitializeComponent();
         }

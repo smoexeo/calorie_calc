@@ -32,7 +32,7 @@ namespace calorie_calc
         private void Profile_Click(object sender, EventArgs e)
         {
             Hide();
-            Profile form = new Profile();
+            Profile form = new Profile(user_id);
             form.ShowDialog();
             Show();
             Main_Form_Load(sender, e);
