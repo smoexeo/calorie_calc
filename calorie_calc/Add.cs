@@ -21,7 +21,7 @@ namespace calorie_calc
             bd();
             count.TextChanged += count_TextChanged;
             user_id = user_id1;
-            date = date1;            
+            date = date1;        
         }
         int rowcount;
         //заполнение dgv
@@ -171,6 +171,11 @@ namespace calorie_calc
 
         
         private void Add_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void count_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -43,16 +43,16 @@ namespace calorie_calc
                     //string name = (string)reader["name"];
                     //((Main_Form)this.Tag).user_name = name;
                     int user_id = (int)reader["id_user"];
-                    ((Main_Form)this.Tag).user_id = user_id;
                     // Если хэш от строки (пароль из поля + соль) совпали с ранее хэшированным то пароль верный
+                    reader.Close();
                     if (passwordHash == CalcHash(password.Text + salt))
                     {
-                        MessageBox.Show("Вход выполнен");
+                        ((Main_Form)this.Tag).user_id = user_id;
                         ActiveForm.Close();
                     }
-                    else MessageBox.Show("Неверный пароль");
+                    else status.Text="Неверный пароль";
                 }
-                else MessageBox.Show("Пользователь с таким логином не найден");
+                else status.Text = "Пользователь с таким логином не найден";
             }
         }
 
@@ -75,6 +75,30 @@ namespace calorie_calc
             {
                 return BitConverter.ToString(SHA1.ComputeHash(Encoding.UTF8.GetBytes(text))).Replace("-", "");
             }
+        }
+
+        private void login_Enter(object sender, EventArgs e)
+        {
+            if(login.Text=="Логин...")
+            login.Text = "";
+        }
+
+        private void password_Enter(object sender, EventArgs e)
+        {
+            if (password.Text=="Пароль...")
+            password.Text = "";
+        }
+
+        private void login_Leave(object sender, EventArgs e)
+        {
+            if (login.Text == "")
+                login.Text = "Логин...";
+        }
+
+        private void password_Leave(object sender, EventArgs e)
+        {
+            if (password.Text == "")
+                password.Text = "Пароль...";
         }
     }
 }
