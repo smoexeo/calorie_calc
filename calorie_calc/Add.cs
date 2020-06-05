@@ -12,12 +12,9 @@ namespace calorie_calc
 {
     public partial class Add : Form
     {
-        public Add(string item, string act)
+        public Add(int user_id, DateTime date)
         {
             InitializeComponent();
-            this.Name = act;
-            this.button.Text = act;
-            //this.item.Text = item;
         }
 
         private void button_Click(object sender, EventArgs e)

@@ -31,12 +31,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.Entry = new System.Windows.Forms.Button();
             this.product = new System.Windows.Forms.DataGridView();
             this.Profile = new System.Windows.Forms.Button();
             this.add = new System.Windows.Forms.Button();
-            this.delete = new System.Windows.Forms.Button();
             this.result = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.product_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,7 +79,7 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -103,13 +103,20 @@
             this.product.Margin = new System.Windows.Forms.Padding(2);
             this.product.Name = "product";
             this.product.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.product.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.product.RowHeadersVisible = false;
             this.product.RowHeadersWidth = 82;
             this.product.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.product.RowTemplate.Height = 33;
             this.product.Size = new System.Drawing.Size(344, 223);
             this.product.TabIndex = 3;
-            this.product.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.product_RowsAdded);
             // 
             // Profile
             // 
@@ -136,26 +143,11 @@
             this.add.Location = new System.Drawing.Point(44, 350);
             this.add.Margin = new System.Windows.Forms.Padding(2);
             this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(134, 33);
+            this.add.Size = new System.Drawing.Size(309, 33);
             this.add.TabIndex = 18;
-            this.add.Text = "ДОБАВИТЬ";
+            this.add.Text = "ПРОДУКТЫ И АКТИВНОСТИ";
             this.add.UseVisualStyleBackColor = false;
             this.add.Click += new System.EventHandler(this.add_product_Click);
-            // 
-            // delete
-            // 
-            this.delete.BackColor = System.Drawing.Color.White;
-            this.delete.FlatAppearance.BorderSize = 0;
-            this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete.ForeColor = System.Drawing.Color.DimGray;
-            this.delete.Location = new System.Drawing.Point(221, 350);
-            this.delete.Margin = new System.Windows.Forms.Padding(2);
-            this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(134, 33);
-            this.delete.TabIndex = 19;
-            this.delete.Text = "УДАЛИТЬ";
-            this.delete.UseVisualStyleBackColor = false;
-            this.delete.Click += new System.EventHandler(this.delete_product_Click);
             // 
             // result
             // 
@@ -188,17 +180,17 @@
             // 
             // Product_name
             // 
-            this.Product_name.HeaderText = "Название";
+            this.Product_name.HeaderText = "НАЗВАНИЕ";
             this.Product_name.Name = "Product_name";
             // 
             // Number
             // 
-            this.Number.HeaderText = "Количество";
+            this.Number.HeaderText = "КОЛИЧЕСТВО";
             this.Number.Name = "Number";
             // 
             // Kalories
             // 
-            this.Kalories.HeaderText = "Итого калорий";
+            this.Kalories.HeaderText = "ИТОГО КАЛОРИЙ";
             this.Kalories.Name = "Kalories";
             // 
             // Main_Form
@@ -212,7 +204,6 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.result);
             this.Controls.Add(this.Profile);
-            this.Controls.Add(this.delete);
             this.Controls.Add(this.add);
             this.Controls.Add(this.product);
             this.Controls.Add(this.Entry);
@@ -235,7 +226,6 @@
         private System.Windows.Forms.DataGridView product;
         private System.Windows.Forms.Button Profile;
         private System.Windows.Forms.Button add;
-        private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Label result;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridViewTextBoxColumn product_id;
