@@ -12,18 +12,20 @@ namespace calorie_calc
 {
     public partial class Add : Form
     {
-        public Add(string item, string act)
+        public Add(int user_id, DateTime date)
         {
             InitializeComponent();
-            this.Name = act;
-            this.button.Text = act;
-            this.item.Text = item;
         }
 
         private void button_Click(object sender, EventArgs e)
         {
             ((Main_Form)this.Tag).weight = Convert.ToInt32(count.Text);
             ActiveForm.Close();
+        }
+
+        private void count_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
