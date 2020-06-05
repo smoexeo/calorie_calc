@@ -137,8 +137,8 @@ namespace calorie_calc
                                 comand.ExecuteNonQuery();
 
                             }
-
-                        }
+                            
+                        }product.Rows[i].Cells[3].Value = 0;
 
                     }
                 }
