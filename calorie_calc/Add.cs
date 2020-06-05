@@ -75,7 +75,7 @@ namespace calorie_calc
                 for (int i = 0; i < rowcount - 1; i++)
                 {
                     //выделенные
-                    if (product.Rows[i].Selected == true)
+                    if (Convert.ToInt32(product.Rows[i].Cells[3].Value)>0)
                     { 
                          // продукты
                         if ((product.Rows[i].Cells[4].Value).ToString() == "product")
