@@ -35,14 +35,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             this.Entry = new System.Windows.Forms.Button();
             this.product = new System.Windows.Forms.DataGridView();
-            this.Profile = new System.Windows.Forms.Button();
-            this.add = new System.Windows.Forms.Button();
-            this.result = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.product_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Kalories = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Profile = new System.Windows.Forms.Button();
+            this.add = new System.Windows.Forms.Button();
+            this.result = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.product)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +64,6 @@
             // 
             this.product.AllowUserToAddRows = false;
             this.product.AllowUserToDeleteRows = false;
-            this.product.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
@@ -118,6 +117,28 @@
             this.product.Size = new System.Drawing.Size(344, 223);
             this.product.TabIndex = 3;
             // 
+            // product_id
+            // 
+            this.product_id.HeaderText = "Идентификатор";
+            this.product_id.Name = "product_id";
+            this.product_id.ReadOnly = true;
+            this.product_id.Visible = false;
+            // 
+            // Product_name
+            // 
+            this.Product_name.HeaderText = "НАЗВАНИЕ";
+            this.Product_name.Name = "Product_name";
+            // 
+            // Number
+            // 
+            this.Number.HeaderText = "КОЛИЧЕСТВО";
+            this.Number.Name = "Number";
+            // 
+            // Kalories
+            // 
+            this.Kalories.HeaderText = "ИТОГО КАЛОРИЙ";
+            this.Kalories.Name = "Kalories";
+            // 
             // Profile
             // 
             this.Profile.BackColor = System.Drawing.Color.White;
@@ -170,28 +191,6 @@
             this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateTimePicker1.Size = new System.Drawing.Size(130, 22);
             this.dateTimePicker1.TabIndex = 24;
-            // 
-            // product_id
-            // 
-            this.product_id.HeaderText = "Идентификатор";
-            this.product_id.Name = "product_id";
-            this.product_id.ReadOnly = true;
-            this.product_id.Visible = false;
-            // 
-            // Product_name
-            // 
-            this.Product_name.HeaderText = "НАЗВАНИЕ";
-            this.Product_name.Name = "Product_name";
-            // 
-            // Number
-            // 
-            this.Number.HeaderText = "КОЛИЧЕСТВО";
-            this.Number.Name = "Number";
-            // 
-            // Kalories
-            // 
-            this.Kalories.HeaderText = "ИТОГО КАЛОРИЙ";
-            this.Kalories.Name = "Kalories";
             // 
             // Main_Form
             // 

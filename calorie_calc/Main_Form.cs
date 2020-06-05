@@ -53,6 +53,7 @@ namespace calorie_calc
                 Entry.Show();
                 Profile.Hide();
                 add.Enabled = false;
+                result.Text = "Войдите, чтобы добавить продукты или активности";
             }
             else
             {
@@ -98,6 +99,37 @@ namespace calorie_calc
 
                     sConn.Close();
                 }
+
+                double sum_plus = 0, sum_minus = 0, sum;
+                for (int i = 0; i < product.RowCount; i++)
+                {
+                    double value = double.Parse(product["Kalories", i].Value + "");
+                    if (value < 0)
+                    {
+                        sum_minus += value;
+                    }
+                    else
+                    {
+                        sum_plus += value;
+                    }
+                }
+
+                sum = sum_plus + sum_minus;
+                string mark;
+                if (sum <= 300 && sum >= -300)
+                {
+                    mark = "Вес стабилен!";
+                }
+                else if (sum >= 0)
+                {
+                    mark = "Набираешь вес!";
+                }
+                else
+                {
+                    mark = "Сбрасываешь вес!";
+                }
+
+                result.Text = "Результат: +" + sum_plus + " " + sum_minus + " = " + sum + "ккал. Итог: " + mark;
             }
 
         }
