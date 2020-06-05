@@ -38,17 +38,20 @@ namespace calorie_calc
                             else gender = gender_male.Text;
                             string sqlExpression = "SELECT * FROM [dbo].[user] WHERE login = " + "'" + login.Text + "'";
                             SqlCommand sCommand = new SqlCommand(sqlExpression, sConn);
+                            SqlDataReader reader = sCommand.ExecuteReader();
                             // ExecuteNonQuery выполняет команду и возвращает число измененных строк, т.к. INSERT то должна вернуться 1
-                            if (sCommand.ExecuteReader().HasRows)
+                            if (reader.HasRows)
                             {
                                 // Выводим сообщение о том, что такой пользователь уже существует
                                 MessageBox.Show("Пользователь с таким логином уже существует");
+                                reader.Close();
                             }
                             else
                             {
-                                sqlExpression = "INSERT INTO [dbo].[user] (login, password, salt, gender) VALUES (" + "'" + login.Text + "','" + CalcHash(password.Text + salt).ToString() + "','" + salt + "','" + gender + "')";
-                                sCommand = new SqlCommand(sqlExpression, sConn);
-                                if (sCommand.ExecuteNonQuery() == 1)
+                                reader.Close();
+                                string sqlExpression_1 = "INSERT INTO [dbo].[user] (login, password, salt, gender) VALUES (" + "'" + login.Text + "','" + CalcHash(password.Text + salt).ToString() + "','" + salt + "','" + gender + "')";
+                                SqlCommand sCommand_1 = new SqlCommand(sqlExpression_1, sConn);
+                                if (sCommand_1.ExecuteNonQuery() == 1)
                                 {
                                     // Выводим сообщение о успехе
                                     MessageBox.Show("Вы зарегистрированы");
@@ -127,6 +130,42 @@ namespace calorie_calc
                 result = false;
             }
             return result;
+        }
+
+        private void login_Enter(object sender, EventArgs e)
+        {
+            if (login.Text == "Логин...")
+                login.Text = "";
+        }
+
+        private void login_Leave(object sender, EventArgs e)
+        {
+            if (login.Text == "")
+                login.Text = "Логин...";
+        }
+
+        private void password_Enter(object sender, EventArgs e)
+        {
+            if (password.Text == "Пароль...")
+                password.Text = "";
+        }
+
+        private void password_Leave(object sender, EventArgs e)
+        {
+            if (password.Text == "")
+                password.Text = "Пароль...";
+        }
+
+        private void password1_Enter(object sender, EventArgs e)
+        {
+            if (password1.Text == "Пароль...")
+                password1.Text = "";
+        }
+
+        private void password1_Leave(object sender, EventArgs e)
+        {
+            if (password1.Text == "")
+                password1.Text = "Пароль...";
         }
     }
 }
