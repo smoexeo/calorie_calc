@@ -44,6 +44,7 @@ namespace calorie_calc
                     //((Main_Form)this.Tag).user_name = name;
                     int user_id = (int)reader["id_user"];
                     // Если хэш от строки (пароль из поля + соль) совпали с ранее хэшированным то пароль верный
+                    reader.Close();
                     if (passwordHash == CalcHash(password.Text + salt))
                     {
                         ((Main_Form)this.Tag).user_id = user_id;
