@@ -55,7 +55,7 @@ namespace calorie_calc
                 var reader1 = comand_sport.ExecuteReader();
                 while (reader1.Read())
                 {
-                    product.Rows.Add(reader1["id_sport"], reader1["name"], reader1["calories"],"0","sport");
+                    product.Rows.Add(reader1["id_sport"], reader1["name"], Convert.ToInt32(reader1["calories"])*-1,"0","sport");
                 }
                 reader1.Close();
                 conn.Close();
