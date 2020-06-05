@@ -138,9 +138,9 @@ namespace calorie_calc
 
                             }
                             
-                        }product.Rows[i].Cells[3].Value = 0;
+                        }
 
-                    }
+                    }product.Rows[i].Cells[3].Value = 0;
                 }
                 conn.Close();
                 Close();
