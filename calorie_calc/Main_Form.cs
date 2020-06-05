@@ -77,7 +77,7 @@ namespace calorie_calc
                         SqlDataReader reader = sCommand.ExecuteReader();
                         while (reader.Read())
                         {
-                            product.Rows.Add(reader["id_product"], reader["name"], reader["calories"], (double)reader["calories"] * (double)reader["weight"]);
+                            product.Rows.Add(reader["id_sport"], reader["name"], reader["time"], "-" + ((double)reader["calories"] * (double)reader["time"]));
                         }
                         reader.Close();
                     }
