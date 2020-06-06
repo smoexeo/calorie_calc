@@ -62,6 +62,7 @@ namespace calorie_calc
                 Entry.Hide();
                 Profile.Show();
                 add.Enabled = true;
+                product.Rows.Clear();
 
                 using (SqlConnection sConn = new SqlConnection(connectString))
                 {
