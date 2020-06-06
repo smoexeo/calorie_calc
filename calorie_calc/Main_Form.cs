@@ -62,6 +62,7 @@ namespace calorie_calc
                 Entry.Hide();
                 Profile.Show();
                 add.Enabled = true;
+                product.Rows.Clear();
 
                 using (SqlConnection sConn = new SqlConnection(connectString))
                 {
@@ -77,9 +78,9 @@ namespace calorie_calc
                         SqlDataReader reader = sCommand.ExecuteReader();
                         while (reader.Read())
                         {
-                            product.Rows.Add(reader["id_product"], reader["name"], reader["calories"], (double)reader["calories"] * (double)reader["weight"]);
+                            product.Rows.Add(reader["id_product"], reader["name"], reader["weight"], Convert.ToInt32(reader["calories"] + "") * Convert.ToInt32(reader["weight"] + "")/100);
                         }
-
+                        reader.Close();
                     }
 
                     using (SqlCommand sCommand = new SqlCommand
@@ -92,9 +93,9 @@ namespace calorie_calc
                         SqlDataReader reader = sCommand.ExecuteReader();
                         while (reader.Read())
                         {
-                            product.Rows.Add(reader["id_sport"], reader["name"], "-" + reader["calories"], "-" + ((double)reader["calories"] * (double)reader["time"]));
+                            product.Rows.Add(reader["id_sport"], reader["name"], "-" + reader["calories"], "-" + (Convert.ToInt32(reader["calories"]) * Convert.ToInt32(reader["time"]))/60);
                         }
-
+                        reader.Close();
                     }
 
                     sConn.Close();
